@@ -1,5 +1,3 @@
-
-
 # UserService
 *NOTE: This is a submodule for [k-lan-playlist-server](https://github.com/Hekku2/k-lan-playlist-server).*
 
@@ -13,3 +11,5 @@ npm install
 ## Developing
 
 ### Tools
+
+See tools from [k-lan-playlist-server](https://github.com/Hekku2/k-lan-playlist-server)
