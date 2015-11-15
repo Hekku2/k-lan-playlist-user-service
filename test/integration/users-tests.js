@@ -9,7 +9,8 @@ describe('Integration tests: users', function(){
     
     var adminUser = {
         id: 1,
-        username: 'admin'
+        username: 'admin',
+        role: 3
     };
     
     before('Initialize server', function() {
@@ -37,6 +38,7 @@ describe('Integration tests: users', function(){
                 var user = res.body[0];
                 assert.equal(adminUser.id, user.id);
                 assert.equal(adminUser.username, user.username);
+                assert.equal(adminUser.role, user.role);
 
                 done();
             });

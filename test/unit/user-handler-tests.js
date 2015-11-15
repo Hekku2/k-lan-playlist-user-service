@@ -71,7 +71,8 @@ describe('user-handler', function(){
         it('should return one user', function (done){
             var expectedUser = {
                 id: 20,
-                username: 'test-user'
+                username: 'test-user',
+                role: 2
             };
             var promise = Promise.resolve(expectedUser);
             queryStub.returns(promise);
@@ -81,6 +82,7 @@ describe('user-handler', function(){
 
                     assert.equal(expectedUser.id, user.id);
                     assert.equal(expectedUser.username, user.username);
+                    assert.equal(expectedUser.role, user.role);
                     done();
                 }
             };

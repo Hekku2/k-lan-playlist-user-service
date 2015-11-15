@@ -9,6 +9,9 @@ var sequelize = new Sequelize(config.get('Database.database'), config.get('Datab
 var User = sequelize.define('user', {
     username: {
         type: Sequelize.STRING
+    },
+    role: {
+        type: Sequelize.INTEGER
     }
 }, {
     timestamps: false
