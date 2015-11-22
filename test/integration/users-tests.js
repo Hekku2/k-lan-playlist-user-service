@@ -85,6 +85,7 @@ describe('Integration tests: users', function(){
         describe('POST', function(){
             it('should update user data', function(done){
                 var newUserName = 'testhermanni';
+                var newRole = 3;
 
                 request(url)
                     .post('/api/user/1')
@@ -109,6 +110,7 @@ describe('Integration tests: users', function(){
                                 var user = res.body;
                                 assert.equal(1, user.id);
                                 assert.equal(newUserName, user.username);
+                                assert.equal(newRole, user.role);
                                 done();
                             });
 

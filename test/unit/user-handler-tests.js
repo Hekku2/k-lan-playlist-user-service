@@ -165,7 +165,8 @@ describe('user-handler', function(){
                 sendStatus: function(status){
                     assert(dbUpdate.calledWith({
                         id: 123,
-                        username: 'test'
+                        username: 'test',
+                        role: 2
                     }));
                     done();
                 }
@@ -176,7 +177,8 @@ describe('user-handler', function(){
                     id: 123
                 },
                 body: {
-                    "username": "test"
+                    "username": "test",
+                    "role": 2
                 }
             };
 

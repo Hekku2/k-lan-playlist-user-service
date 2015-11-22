@@ -35,7 +35,8 @@ exports.update = function(req, res){
     //TODO Validate user
     var updated = {
         id: req.params.id,
-        username: req.body.username
+        username: req.body.username,
+        role: req.body.role
     };
 
     var success = function(result) {
